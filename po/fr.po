@@ -41,7 +41,7 @@ msgstr "Album inconnu"
 
 #: ../panel-plugin/soundmenu-plugin.c:75
 msgid "Double-click to launch the music player"
-msgstr "Double-cliquez pour démarrer le lecteur"
+msgstr "Double-clic démarre le lecteur"
 
 #: ../panel-plugin/soundmenu-plugin.c:244
 #: ../panel-plugin/soundmenu-dialogs.c:305
@@ -78,22 +78,22 @@ msgstr "Lecteur"
 
 #: ../panel-plugin/soundmenu-dialogs.c:227
 msgid "Show the cover art on the panel"
-msgstr "Afficher la pochette sur le tableau de bord."
+msgstr "Afficher la pochette sur le tableau de bord"
 
 #: ../panel-plugin/soundmenu-dialogs.c:234
 msgid "Show huge cover art when deskbar panel mode"
-msgstr "Afficher une grande pochette en mode barre du bureau."
+msgstr "Afficher une grande pochette en mode barre de bureau verticale"
 
 #: ../panel-plugin/soundmenu-dialogs.c:241
 msgid "Show stop button"
-msgstr "Afficher le bouton stop"
+msgstr "Afficher le bouton Stop"
 
 #: ../panel-plugin/soundmenu-dialogs.c:247
 msgid "Hide the controls if the player is not present"
-msgstr "Masquer les boutons si le lecteur n'est pas en fonction."
+msgstr "Masquer les boutons si le lecteur n'est pas en fonction"
 
 msgid "Hide the cover if the player is not present"
-msgstr "Masquer aussi la pochette si le lecteur n'est pas en fonction."
+msgstr "Masquer aussi la pochette si le lecteur n'est pas en fonction"
 
 #: ../panel-plugin/soundmenu-dialogs.c:254
 msgid "Use multimedia keys"
@@ -105,7 +105,7 @@ msgstr "Activer le scrobbling Last.fm"
 
 #: ../panel-plugin/soundmenu-dialogs.c:267
 msgid "User"
-msgstr "Uilisateur"
+msgstr "Utilisateur"
 
 #: ../panel-plugin/soundmenu-dialogs.c:275
 msgid "Password"
@@ -121,11 +121,11 @@ msgstr "Comportement"
 
 #: ../panel-plugin/soundmenu-lastfm.c:52
 msgid "Love song on Last.fm failed."
-msgstr "L'action 'Aimer' la chanson a échoué en ligne sur Last.fm"
+msgstr "L'action “Aimer la chanson” a échoué en ligne sur Last.fm"
 
 #: ../panel-plugin/soundmenu-lastfm.c:98
 msgid "Unlove song on Last.fm failed."
-msgstr "L'action 'Ne plus aimer' la chanson a échoué en ligne sur Last.fm"
+msgstr "L'action “Ne plus aimer la chanson” a échoué en ligne sur Last.fm"
 
 #: ../panel-plugin/soundmenu-related.c:111
 #, c-format
@@ -161,6 +161,15 @@ msgstr "jours"
 #: ../panel-plugin/soundmenu-utils.c:212
 msgid "day"
 msgstr "jour"
+
+msgid "Loop Playlist"
+msgstr "Répéter la liste de lecture"
+
+msgid "Shuffle"
+msgstr "Lecture aléatoire"
+
+msgid "Tools"
+msgstr "Outils"
 
 #~ msgid "Last.fm user"
 #~ msgstr "Usuario de Last.fm"
