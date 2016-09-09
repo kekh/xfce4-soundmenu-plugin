@@ -46,9 +46,6 @@
 #include "soundmenu-lastfm.h"
 #endif
 
-#if FEAT_MIXER
-#include "soundmenu-pulseaudio.h"
-#endif
 
 
 G_BEGIN_DECLS
@@ -73,9 +70,6 @@ struct _SoundmenuPlugin {
 	GtkWidget         *layout_box;
 
 	/* panel widgets */
-	#if FEAT_MIXER
-	PulseaudioButton  *vol_button;
-	#endif
 	SoundmenuAlbumArt *album_art;
 	GtkWidget		  *ev_album_art;
 
