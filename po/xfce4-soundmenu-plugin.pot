@@ -89,6 +89,10 @@ msgstr ""
 msgid "Hide the controls if the player is not present"
 msgstr ""
 
+#: ../panel-plugin/soundmenu-dialogs.c:247
+msgid "Hide the cover if the player is not present"
+msgstr ""
+
 #: ../panel-plugin/soundmenu-dialogs.c:254
 msgid "Use multimedia keys"
 msgstr ""
