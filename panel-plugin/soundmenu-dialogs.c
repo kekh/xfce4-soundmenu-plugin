@@ -159,6 +159,15 @@ toggle_hide_controls_if_loose(GtkToggleButton *button,
 	soundmenu_update_layout_changes (soundmenu);
 }
 
+static void
+toggle_hide_cover_if_loose(GtkToggleButton *button,
+                              SoundmenuPlugin *soundmenu)
+{
+	soundmenu->hide_cover_if_loose = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(button));
+
+	soundmenu_update_layout_changes (soundmenu);
+}
+
 #ifdef HAVE_LIBKEYBINDER
 static void
 toggle_use_global_keys_check(GtkToggleButton *button, SoundmenuPlugin    *soundmenu)
@@ -194,7 +203,7 @@ soundmenu_configure (XfcePanelPlugin *plugin,
                      SoundmenuPlugin *soundmenu)
 {
 	GtkWidget *dialog;
-	GtkWidget *pref_table, *player_label, *player_entry, *show_album_art_check, *huge_on_deskbar_mode_check, *show_stop_check, *hide_controls_if_loose_check;
+	GtkWidget *pref_table, *player_label, *player_entry, *show_album_art_check, *huge_on_deskbar_mode_check, *show_stop_check, *hide_controls_if_loose_check, *hide_cover_if_loose_check;
 	guint row = 0;
 
 	#ifdef HAVE_LIBKEYBINDER
@@ -260,6 +269,12 @@ soundmenu_configure (XfcePanelPlugin *plugin,
 	g_signal_connect (G_OBJECT(hide_controls_if_loose_check), "toggled",
 	                  G_CALLBACK(toggle_hide_controls_if_loose), soundmenu);
 
+	hide_cover_if_loose_check = gtk_check_button_new_with_label(_("Hide the cover if the player is not present"));
+	if (soundmenu->hide_cover_if_loose)
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(hide_cover_if_loose_check), TRUE);
+	g_signal_connect (G_OBJECT(hide_cover_if_loose_check), "toggled",
+	                  G_CALLBACK(toggle_hide_cover_if_loose), soundmenu);
+
 	#ifdef HAVE_LIBKEYBINDER
 	use_global_keys_check = gtk_check_button_new_with_label(_("Use multimedia keys"));
 	if (soundmenu->use_global_keys)
@@ -302,6 +317,7 @@ soundmenu_configure (XfcePanelPlugin *plugin,
 	soundmenu_hig_workarea_table_add_wide_control(pref_table, &row, huge_on_deskbar_mode_check);
 	soundmenu_hig_workarea_table_add_wide_control(pref_table, &row, show_stop_check);
 	soundmenu_hig_workarea_table_add_wide_control(pref_table, &row, hide_controls_if_loose_check);
+	soundmenu_hig_workarea_table_add_wide_control(pref_table, &row, hide_cover_if_loose_check);
 
 	soundmenu_hig_workarea_table_add_section_title(pref_table, &row, _("Behavior"));
 	#ifdef HAVE_LIBKEYBINDER
