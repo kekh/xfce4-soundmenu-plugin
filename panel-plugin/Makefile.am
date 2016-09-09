@@ -1,6 +1,5 @@
 AM_CPPFLAGS = \
 	-I$(top_srcdir) \
-	-I $(top_srcdir)/gvc \
 	-DG_LOG_DOMAIN=\"xfce4-soundmenu-plugin\" \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\" \
 	-DBASEICONDIR=\"$(datadir)/icons/hicolor\" \
@@ -72,9 +71,7 @@ libsoundmenu_la_LIBADD = \
 	$(LIBXFCE4UTIL_LIBS) \
 	$(LIBXFCE4UI_LIBS) \
 	$(LIBXFCE4PANEL_LIBS) \
-	$(LIBMPRIS2CLIENT_LIBS) \
-	../gvc/libgvc.la \
-	-lm
+	$(LIBMPRIS2CLIENT_LIBS)
 
 if HAVE_LIBKEYBINDER
 libsoundmenu_la_CFLAGS += $(LIBKEYBINDER_CFLAGS)
