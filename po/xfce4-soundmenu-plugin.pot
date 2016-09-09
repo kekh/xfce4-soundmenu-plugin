@@ -159,3 +159,12 @@ msgstr ""
 #: ../panel-plugin/soundmenu-utils.c:212
 msgid "day"
 msgstr ""
+
+msgid "Loop Playlist"
+msgstr ""
+
+msgid "Shuffle"
+msgstr ""
+
+msgid "Tools"
+msgstr ""
