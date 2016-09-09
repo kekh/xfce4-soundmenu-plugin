@@ -1,6 +1,5 @@
 AM_CPPFLAGS = \
 	-I$(top_srcdir) \
-	-I $(top_srcdir)/gvc \
 	-DG_LOG_DOMAIN=\"xfce4-soundmenu-plugin\" \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\" \
 	-DBASEICONDIR=\"$(datadir)/icons/hicolor\" \
