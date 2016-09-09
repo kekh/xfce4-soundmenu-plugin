@@ -439,6 +439,7 @@ soundmenu_save (XfcePanelPlugin *plugin,
 		xfce_rc_write_bool_entry (rc, "huge_on_deskbar_mode", soundmenu->huge_on_deskbar_mode);
 		xfce_rc_write_bool_entry (rc, "show_stop", soundmenu->show_stop);
 		xfce_rc_write_bool_entry (rc, "hide_controls_if_loose", soundmenu->hide_controls_if_loose);
+		xfce_rc_write_bool_entry (rc, "hide_cover_if_loose", soundmenu->hide_cover_if_loose);
 		#ifdef HAVE_LIBKEYBINDER
 		xfce_rc_write_bool_entry (rc, "use_global_keys", soundmenu->use_global_keys);
 		#endif
@@ -484,6 +485,7 @@ soundmenu_read (SoundmenuPlugin *soundmenu)
 			soundmenu->huge_on_deskbar_mode = xfce_rc_read_bool_entry (rc, "huge_on_deskbar_mode", FALSE);
 			soundmenu->show_stop = xfce_rc_read_bool_entry (rc, "show_stop", FALSE);
 			soundmenu->hide_controls_if_loose = xfce_rc_read_bool_entry (rc, "hide_controls_if_loose", FALSE);
+			soundmenu->hide_cover_if_loose = xfce_rc_read_bool_entry (rc, "hide_cover_if_loose", FALSE);
 			#ifdef HAVE_LIBKEYBINDER
 			soundmenu->use_global_keys = xfce_rc_read_bool_entry (rc, "use_global_keys", DEFAULT_GLOBAL_KEYS);
 			#endif
@@ -509,6 +511,7 @@ soundmenu_read (SoundmenuPlugin *soundmenu)
 	soundmenu->huge_on_deskbar_mode = FALSE;
 	soundmenu->show_stop = FALSE;
 	soundmenu->hide_controls_if_loose = FALSE;
+	soundmenu->hide_cover_if_loose = FALSE;
 	#ifdef HAVE_LIBKEYBINDER
 	soundmenu->use_global_keys = DEFAULT_GLOBAL_KEYS;
 	#endif
@@ -914,7 +917,12 @@ void soundmenu_update_layout_changes (SoundmenuPlugin *soundmenu)
 	else {
 		if(soundmenu->hide_controls_if_loose) {
 			gtk_widget_hide(GTK_WIDGET(soundmenu->hvbox_buttons));
-			gtk_widget_show(soundmenu->ev_album_art);
+			if (soundmenu->hide_cover_if_loose) {
+				gtk_widget_hide(soundmenu->ev_album_art);
+			}
+			else {
+				gtk_widget_show(soundmenu->ev_album_art);
+			}
 		}
 		else {
 			gtk_widget_show(GTK_WIDGET(soundmenu->hvbox_buttons));
