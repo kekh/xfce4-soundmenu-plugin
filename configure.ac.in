@@ -146,5 +146,5 @@ echo "  Global keyboard shortcuts support.......................................
 echo "  Lastfm support (Need http://liblastfm.sourceforge.net >=0.5)................: $LIBCLASTFM_FOUND"
 echo "  Search lyrics and artist info( Need https://github.com/sahib/glyr >= 0.9.4).: $LIBGLYR_FOUND"
 echo "  Notification support........................................................: $LIBNOTIFY_FOUND"
-echo "  Experimental mixer button...................................................: $enable_mixer"
+echo "  Experimental mixer button...................................................: DISABLED!"
 echo
