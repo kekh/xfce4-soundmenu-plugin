@@ -90,6 +90,7 @@ struct _SoundmenuPlugin {
 	gboolean		huge_on_deskbar_mode;
 	gboolean		show_stop;
 	gboolean		hide_controls_if_loose;
+	gboolean		hide_cover_if_loose;
 	gboolean		use_global_keys;
 };
 
