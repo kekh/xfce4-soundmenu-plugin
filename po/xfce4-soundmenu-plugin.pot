@@ -160,7 +160,7 @@ msgstr ""
 msgid "day"
 msgstr ""
 
-msgid "Loop Playlist"
+msgid "Loop playlist"
 msgstr ""
 
 msgid "Shuffle"
