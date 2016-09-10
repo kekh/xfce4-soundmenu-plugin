@@ -162,7 +162,7 @@ msgstr "jours"
 msgid "day"
 msgstr "jour"
 
-msgid "Loop Playlist"
+msgid "Loop playlist"
 msgstr "Répéter la liste de lecture"
 
 msgid "Shuffle"
